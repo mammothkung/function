@@ -1,5 +1,5 @@
 local func = {}
-
+func.__index = func
 function func:delfile(path)
 	assert(typeof(path) == "string", "Unable to concat: " .. tostring(path) .. " not string")
 	if isfile(path) then
